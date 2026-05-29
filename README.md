@@ -66,9 +66,6 @@ src/main/webapp
 
 
 
-\## Screenshots
-
-(Add screenshots here)
 
 
 
