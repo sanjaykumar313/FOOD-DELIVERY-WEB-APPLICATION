@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+  <!-- Minimal web.xml for Jakarta Servlet 6 / JSP support.
+       This replaces the old Servlet 2.3 DTD that can cause EL to be ignored
+       in modern servlet containers. If you don't need any descriptors,
+       this file can remain minimal because servlets are annotated.
+  -->
+
+  <display-name>Food Delivery App</display-name>
+
+     <!-- Ensure EL is evaluated in JSPs -->
+     <jsp-config>
+          <jsp-property-group>
+               <url-pattern>*.jsp</url-pattern>
+               <el-ignored>false</el-ignored>
+          </jsp-property-group>
+     </jsp-config>
+
+</web-app>
